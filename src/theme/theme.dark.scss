@@ -1,0 +1,26 @@
+.dark-theme {
+    ion-content,
+    ion-list,
+    ion-item {
+        background-color: #161616 !important;
+        color: #fff;
+    }
+    .toolbar-title {
+        color: #fff;
+    }
+    th {
+        background-color: #1b1b1b;
+        font-weight: bold !important;
+    }
+    td {
+        background-color: #212121;
+    }
+    .header .toolbar-background,
+    ion-footer {
+        background-color: #000000;
+        color: #fff;
+    }
+  }
+$popover-ios-background: #efefef;
+$popover-md-background: #efefef;
+  

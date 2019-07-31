@@ -1,0 +1,47 @@
+page-welcome {
+    .swiper-pagination-bullet-active {
+        background: purple;
+      }
+      #slide, #slide3{
+          padding-top: auto;
+          padding-bottom: auto;
+          width: 70%;
+          height: auto;
+      }
+      #slide3 {
+          padding-bottom: 30%;
+      }
+      #clr {
+          border: none;
+          background-color: rgb(228, 157, 36);
+          color: white;
+      }
+      #clr2 {
+        border: none;
+        background-color: rgb(67, 145, 235);
+        color: white;
+    }
+    #clr3 {
+        border: none;
+        background-color: rgb(31, 177, 182);
+        color: white;
+    }
+      #topB {
+        padding-bottom: 150px;
+      }
+      #track {
+          padding-bottom: 20px;
+      }
+
+    #last {
+        padding-bottom: 20%;
+    }
+    .start-btn {
+        height: 50px;
+        font-size: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-transform: none;
+    }
+
+}

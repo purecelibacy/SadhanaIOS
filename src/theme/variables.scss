@@ -1,0 +1,133 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary-color-dark:   #00796B,
+  primary:              #009688,
+  primary-color-light:  #B2DFDB,
+  primary-color-text:   #FFFFFF,
+  accent-color:         #FF5722,
+  primary-text-color:   #212121,
+  secondary-text-color: #757575,
+  divider-color:        #BDBDBD,
+  dark-red:             #F44336,
+  amber:                #FFC107,
+  dark-purple:          #d500f9,
+  pink-g:               #ff1744,
+  popover:              #efefef
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$checkbox-ios-background-color-off: transparent;
+$checkbox-ios-icon-checkmark-width: 2px;
+$checkbox-ios-icon-border-width: 0.5px;
+$checkbox-ios-icon-border-color-off: #212121;
+
+$button-ios-box-shadow: 0;
+$button-ios-background-color: transparent;
+$button-ios-font-weight: bold;
+$button-ios-font-size: 1.5rem;
+$button-ios-height: 2rem;
+$button-ios-padding-end: .5em;
+$button-ios-margin-top: 0rem;
+$button-ios-margin-end: 0rem;
+$button-ios-margin-bottom: 0rem;
+$button-ios-margin-start: 0rem;
+
+$popover-ios-max-height: 180px;
+$popover-ios-border-radius: 0px;
+$popover-ios-width: 200px;
+$popover-ios-background: #212121;
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+$checkbox-md-icon-background-color-off: transparent;
+$checkbox-md-border-bottom-width: 0px;
+
+$popover-md-max-height: 190px;
+$popover-md-border-radius: 0px;
+$popover-md-width: 200px;
+$popover-md-background: #212121;
+
+$button-md-margin-top: 0rem;
+$button-md-margin-end: 0rem;
+$button-md-margin-bottom: 0rem;
+$button-md-margin-start: 0rem;
+$button-md-padding-end: .5em;
+$button-md-height: 2rem;
+$button-md-font-size: 1.5rem;
+$button-md-font-weight: bold;
+$button-md-background-color: transparent;
+$button-md-box-shadow: 0;
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+@import "theme.light";
+@import "theme.dark";
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i');

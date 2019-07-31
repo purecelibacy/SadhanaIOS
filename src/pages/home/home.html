@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="font">
+      Sadhana
+    </ion-title>
+    <ion-buttons end>
+      <button id="white" (click)="presentPopover($event)">
+        <ion-icon name="md-more" id="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+  <div class="left">
+    <table class="table1">
+      <tr>
+        <th>
+          &lt;&lt; {{month}} &gt;&gt;
+        </th>
+      </tr>
+      <tr>
+        <td class="samayik">
+          Samayik
+        </td>
+      </tr>
+      <tr>
+        <td class="vanchan">
+          Vanchan
+        </td>
+      </tr>
+      <tr>
+        <td class="vidhi">
+          Vidhi
+        </td>
+      </tr>
+      <tr>
+        <td class="gsatsang">
+          G. Satsang
+        </td>
+      </tr>
+      <tr>
+        <td class="seva">
+          Seva
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <ion-scroll scrollX="true" style="overflow: scroll; white-space: nowrap;">
+    <div class="left">
+      <table class="table2">
+        <tr>
+          <th *ngFor="let col of allData">
+            {{col.day}}<br>{{col.month}}
+          </th>
+        </tr>
+        <tr>
+          <td *ngFor="let col of allData">
+            <ion-checkbox id="samayik{{i}}" [(ngModel)]="col.samayik" (ionChange)="checked(col._id,'S')" color="accent-color"></ion-checkbox>
+          </td>
+        </tr>
+        <tr>
+          <td *ngFor="let col of allData" >
+            <button ion-button class="vanchan" (click)="popUpVanchan(col)">{{col.vanchan}}</button>
+          </td>
+        </tr>
+        <tr>
+          <td *ngFor="let col of allData">
+            <ion-checkbox id="vidhi{{i}}" [(ngModel)]="col.vidhi" (ionChange)="checked(col._id,'V')" color="amber"></ion-checkbox>
+          </td>
+        </tr>
+        <tr>
+          <td *ngFor="let col of allData">
+            <ion-checkbox id="gensatsang{{i}}" [(ngModel)]="col.generalSatsang" (ionChange)="checked(col._id,'GS')" color="dark-purple"></ion-checkbox>
+          </td>
+        </tr>
+        <tr>
+          <td *ngFor="let col of allData">
+              <button ion-button class="seva" (click)="popUpSeva(col)">{{col.seva}}</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </ion-scroll>
+
+
+</ion-content>

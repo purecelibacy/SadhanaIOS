@@ -1,0 +1,56 @@
+<ion-content overflow-scroll="true">
+  <h1 class="title">
+    <ion-icon *ngIf="loggedin == true" ios="ios-arrow-back" md="md-arrow-back" class="arrow" (click)="cancel()"></ion-icon>
+    <b>Profile</b>
+  </h1>
+
+  <br>
+  <br>
+
+  <img src="assets/imgs/dadas_logo.png" alt="Sadhana Logo" class="logo">
+
+  <br>
+  <br>
+  <form [formGroup]="loginValidation" (submit)="addUser()">
+    <ion-item class="input-size">
+      <ion-label fixed color="light" class="Lable">Firstname</ion-label>
+      <ion-input formControlName="firstName" type="text" dark [(ngModel)]="user.fname" name="fname"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginValidation.controls.firstName.valid && loginValidation.controls.firstName.dirty">
+      <p>Please enter a valid Firstname.</p>
+    </ion-item>
+    <br>
+
+    <ion-item class="input-size">
+      <ion-label fixed color="light" class="Lable">Lastname</ion-label>
+      <ion-input formControlName="lastName" type="text" [(ngModel)]="user.lname" name="lname"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginValidation.controls.lastName.valid && loginValidation.controls.lastName.dirty">
+      <p>Please enter a valid Lastname.</p>
+    </ion-item>
+    <br>
+
+    <ion-item class="input-size">
+      <ion-label fixed color="light" class="Lable">Center</ion-label>
+      <ion-input formControlName="center" type="text" [(ngModel)]="user.center" name="center"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginValidation.controls.center.valid && loginValidation.controls.center.dirty">
+      <p>Please enter a valid Center.</p>
+    </ion-item>
+    <br>
+
+    <ion-item class="input-size">
+      <ion-label fixed color="light" class="Lable">ICard No.</ion-label>
+      <ion-input formControlName="icard" type="number" [(ngModel)]="user.icard" name="icard"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginValidation.controls.icard.valid && loginValidation.controls.icard.dirty">
+      <p>Please enter a valid I-card no.</p>
+    </ion-item>
+    <br>
+
+    <div padding class="sign-in">
+      <button ion-button [disabled]="!loginValidation.valid" type="submit" color="popover" class="button">{{submitButtonName}}</button>
+    </div>
+  </form>
+
+</ion-content>
